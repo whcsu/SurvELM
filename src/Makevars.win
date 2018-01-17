@@ -1,0 +1,6 @@
+## Use c++11
+CXX_STD = CXX11
+PKG_CPPFLAGS = -DR_BUILD -DWIN_R_BUILD
+
+PKG_LIBS = $(shell $(R_HOME)/bin${R_ARCH_BIN}/Rscript.exe -e "Rcpp:::LdFlags()") $(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS)
+

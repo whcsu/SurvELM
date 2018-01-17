@@ -1,0 +1,12 @@
+Package: SurvELM
+Type: Package
+Title: Survival Anlalysis with Extreme Learning Machines  
+Version: 0.9.0
+Author: Hong Wang
+Maintainer: Hong Wang <wh@csu.edu.cn>
+Description: An R package for Survival Anlalysis with Extreme Learning Machines.
+License: GPL (>= 2)
+Imports: Rcpp,survival,RcppNumerical,glmnet,CoxBoost
+Depends: Matrix,mboost
+LinkingTo: Rcpp,RcppArmadillo,RcppEigen, RcppNumerical
+RoxygenNote: 6.0.1
