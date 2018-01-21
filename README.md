@@ -1,7 +1,8 @@
-# SurvELM: an R package for high dimensional survival analysis with extreme learning machine, Submitted to Bioinformatics
+# SurvELM: an R package for high dimensional survival analysis with extreme learning machine
+ 
+ A note submitted to Bioinformatics
 
-Install the the SurvELM
-
+How to install the the SurvELM R package:
 library(devtools)
 install_github("whcsu/SurvELM")
 
