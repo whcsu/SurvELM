@@ -8,7 +8,7 @@ library(devtools)
 
 install_github("whcsu/SurvELM")
 
-The R Shiny version is available from the following URL:
+The web-based R Shiny version is available from the following URL:
 
 https://whcsu.shinyapps.io/SurvELM/
 
