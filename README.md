@@ -1,6 +1,6 @@
 # SurvELM: an R package for high dimensional survival analysis with extreme learning machine
  
- A note submitted to Neurocomputing 
+ A note submitted to Knowledge-Based Systems 
 
 How to install the the SurvELM R package:
 
