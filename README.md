@@ -56,3 +56,7 @@ y_impute=kerelmsurv$newy
 ### Online Demo
 In addition to a traditional R package "SurvELM", we also provide a simple and interactive web-based version using Shiny. The R Package is available at https://github.com/whcsu/SurvELM and its Shiny version is available at 
 https://whcsu.shinyapps.io/SurvELM/
+
+### References
+
+Hong Wang and Lifeng Zhou. SurvELM: an R package for high dimensional survival analysis with extreme learning machine. Submitted to Knowledge-Based Systems, 2018.
