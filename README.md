@@ -11,18 +11,26 @@ install_github("whcsu/SurvELM")
 ELMBJ function
 ## Description
 A Kernel Extreme Learning Machine Using the Buckley-James estimator
-# Usage
+#### Usage
 ELMBJ(x, y, Regularization_coefficient, kerneltype = 2, Kernel_para = c(2,  1))
-# Arguments
+#### Arguments
 x The covariates(predictor variables) of training data.
+
 y Survival time and censored status of training data. Must be a Surv survival object.
+
 Regularization_coefficient Ridge or Tikhonov regularization parameter. Default value for ELMBJEN is 10000. It need be set by the user here when using a single base ELM survival model. Also known as C in the ELM paper.
-kerneltype Type of kernel matrix. kerneltype=1,a RBF kernel;kerneltype=2 , a linear kernel;kerneltype=3 ,a polynomial kernel;kerneltype=4, a sigmoid kernel.Kernel_para Parameters for different types of kernels. 
-A single value for kerneltype=1 or 2. A vector for kerneltype=3 or 4.
-# List of returned values
+
+kerneltype Type of kernel matrix. kerneltype=1,a RBF kernel;kerneltype=2 , a linear kernel;kerneltype=3 ,a polynomial kernel;kerneltype=4, a sigmoid kernel.
+
+Kernel_para Parameters for different types of kernels. A single value for kerneltype=1 or 2. A vector for kerneltype=3 or 4.
+
+#### List of returned values
 trainMSE  Mean Square Error(MSE) on training data.
+
 newy  Esitmated survival times of training data by the Buckley-James estimator.
+
 outputWeight  Weights of the output layer in ELM.
+#### Sample R code
 ```R
 set.seed(123)
 require(SurvELM)
