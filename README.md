@@ -63,4 +63,4 @@ https://whcsu.shinyapps.io/SurvELM/
 
 ### References
 
-Hong Wang and Lifeng Zhou. SurvELM: an R package for high dimensional survival analysis with extreme learning machine. Knowledge-Based Systems, 2018.(Accepted)
+Hong Wang and Lifeng Zhou. SurvELM: an R package for high dimensional survival analysis with extreme learning machine. Knowledge-Based Systems, 2018. https://doi.org/10.1016/j.knosys.2018.07.009
