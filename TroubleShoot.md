@@ -17,7 +17,7 @@ Error: Failed to install 'SurvELM' from GitHub:
     我们重新安装和测试了R程序，但都无法通过install_github("whcsu/SurvELM")  和 devtools::install_github("whcsu/SurvELM") 安装"SurvELM"程序包。我们也重新安装了Rcpp,survival,RcppNumerical,glmnet,CoxBoos，RcppArmadillo,RcppEigen, RcppNumericalt程序包，结果仍然是上面的报错内容。
     特向您求助，希望您能够帮助我们解决通过install_github("whcsu/SurvELM")  和 devtools::install_github("whcsu/SurvELM") 安装"SurvELM"程序包的难题。
     
-    ## 解答1
+## 解答1
     
 1、手工找到删除  'C:/Program Files/R/R-3.6.1/library/00LOCK-SurvELM'文件，重试。
 
@@ -26,3 +26,31 @@ Error: Failed to install 'SurvELM' from GitHub:
 3、Rtools版本最好用Rtools34, Rtools35版本我也发现有些问题。替换Rtools版本重试。
 
 可以先从第一步入手，第一步不行，再进行第二步，依次类推。
+
+## Question 2
+thank you for SurvELM package.
+I would like to calculate Integrated AUC based for the several time points (for instance using timeROC package)
+for that it requires the predicted risk, but using the example:
+elmpredict=predict(elmsurvmodel,test[,-c(rii)])
+it doesn't give the actual risks.
+
+What do you advise?
+
+## Solution 2
+Currently, depending on functions, SurvELM can output several types of values:
+
+1.ELMBJ or ELMBJEN supports the output of survival time
+
+y_impute=kerelmsurv$newy
+
+2.ELMCox or ELMCoxEN supports relative-risk
+
+#The predicted relative-risk
+testpreres=predict(elmsurvmodel,teset[,-c(rii)],type="response")
+
+3. ELMMboost supports Estimated survival probabilities at the given time points
+
+elmsurvmodel=ELMmboost(x=trset[,-rii],y=Surv(trset[,rii[1]], trset[,rii[2]]))
+sfit=survFit(elmsurvmodel)  
+
+Hope this may help you.
